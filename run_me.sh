@@ -50,5 +50,5 @@ zipV2Ray() {
 backupRule
 getgeoData
 getnewV2Ray
-updateV2Ray
-zipV2Ray
+#updateV2Ray
+#zipV2Ray
