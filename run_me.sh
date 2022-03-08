@@ -1,6 +1,8 @@
 #!/bin/bash
-# cratdir
 
+source ./rules/auto_update/update_rules.sh
+
+# cratdir
 dirname=backupfile
 echo "the dir name is $dirname"
 if [ ! -d $dirname ]; then
@@ -47,8 +49,15 @@ zipV2Ray() {
 	tar -zcf latest_v2ray.tar.gz v2ray
 }
 
+update_git(){
+	git add .
+	git commit -m "update"
+	git push
+}
+
 backupRule
 getgeoData
 getnewV2Ray
 #updateV2Ray
 #zipV2Ray
+update_git
